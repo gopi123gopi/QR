@@ -2,19 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>QR Code Generator</title>
+    <title>Advanced QR Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
 
 <div class="container">
     <h2>QR Code Generator</h2>
+
     <input type="text" id="qrText" placeholder="Enter text or URL">
-    <button onclick="generateQR()">love</button>
+
+    <div class="controls">
+        <label>
+            QR Color:
+            <input type="color" id="qrColor" value="#000000">
+        </label>
+
+        <label>
+            Background:
+            <input type="color" id="bgColor" value="#ffffff">
+        </label>
+    </div>
+
+    <button onclick="toggleMode()">🌗 Dark / Light</button>
+    <button onclick="downloadQR()">⬇ Download</button>
+
     <div id="qrBox"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
