@@ -1,44 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background: #0f2027;
-    background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #0f172a;
     color: white;
 }
 
-.container {
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
+body.light {
+    background: #f1f5f9;
+    color: black;
 }
 
-input {
+.container {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+}
+
+input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin: 15px 0;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+    margin: 10px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
 button {
-    padding: 10px 15px;
-    background: #38bdf8;
-    border: none;
-    border-radius: 5px;
+    margin: 5px;
+    padding: 8px 12px;
     cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #0ea5e9;
+    border: none;
+    border-radius: 6px;
 }
 
 #qrBox {
-    margin-top: 20px;
+    margin-top: 15px;
 }
